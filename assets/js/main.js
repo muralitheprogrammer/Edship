@@ -175,3 +175,202 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".services .service-card");
+
+  function resetCards() {
+    cards.forEach(c => c.classList.remove("expanded"));
+  }
+
+  cards.forEach(card => {
+    card.addEventListener("mouseenter", function () {
+      resetCards(); // Remove expanded class from all cards
+      this.classList.add("expanded"); // Expand only hovered card
+    });
+
+    card.addEventListener("mouseleave", resetCards);
+  });
+});
+
+// banner-carousel
+function bannerCarouselOne() {
+  $('.banner-carousel.banner-carousel-1').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    dots: true,
+    speed: 600,
+    arrows: true,
+    prevArrow: '<button type="button" class="carousel-control left" aria-label="carousel-control"><i class="fas fa-chevron-left"></i></button>',
+    nextArrow: '<button type="button" class="carousel-control right" aria-label="carousel-control"><i class="fas fa-chevron-right"></i></button>'
+  });
+  $('.banner-carousel.banner-carousel-1').slickAnimation();
+}
+bannerCarouselOne();
+
+
+// banner Carousel Two
+function bannerCarouselTwo() {
+  $('.banner-carousel.banner-carousel-2').slick({
+    fade: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    dots: false,
+    speed: 600,
+    arrows: true,
+    prevArrow: '<button type="button" class="carousel-control left" aria-label="carousel-control"><i class="fas fa-chevron-left"></i></button>',
+    nextArrow: '<button type="button" class="carousel-control right" aria-label="carousel-control"><i class="fas fa-chevron-right"></i></button>'
+  });
+}
+bannerCarouselTwo();
+
+
+// pageSlider
+function pageSlider() {
+  $('.page-slider').slick({
+    fade: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    dots: false,
+    speed: 600,
+    arrows: true,
+    prevArrow: '<button type="button" class="carousel-control left" aria-label="carousel-control"><i class="fas fa-chevron-left"></i></button>',
+    nextArrow: '<button type="button" class="carousel-control right" aria-label="carousel-control"><i class="fas fa-chevron-right"></i></button>'
+  });
+}
+pageSlider();
+
+
+// Shuffle js filter and masonry
+function projectShuffle() {
+  if ($('.shuffle-wrapper').length !== 0) {
+    var Shuffle = window.Shuffle;
+    var myShuffle = new Shuffle(document.querySelector('.shuffle-wrapper'), {
+      itemSelector: '.shuffle-item',
+      sizer: '.shuffle-sizer',
+      buffer: 1
+    });
+    $('input[name="shuffle-filter"]').on('change', function (evt) {
+      var input = evt.currentTarget;
+      if (input.checked) {
+        myShuffle.filter(input.value);
+      }
+    });
+    $('.shuffle-btn-group label').on('click', function () {
+      $('.shuffle-btn-group label').removeClass('active');
+      $(this).addClass('active');
+    });
+  }
+}
+projectShuffle();
+
+
+// testimonial carousel
+function testimonialCarousel() {
+  $('.testimonial-slide').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    speed: 600,
+    arrows: false
+  });
+}
+testimonialCarousel();
+
+
+// team carousel
+function teamCarousel() {
+  $('.team-slide').slick({
+    dots: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    arrows: true,
+    prevArrow: '<button type="button" class="carousel-control left" aria-label="carousel-control"><i class="fas fa-chevron-left"></i></button>',
+    nextArrow: '<button type="button" class="carousel-control right" aria-label="carousel-control"><i class="fas fa-chevron-right"></i></button>',
+    responsive: [{
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 481,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+}
+teamCarousel();
+document.addEventListener('DOMContentLoaded', function () {
+  const track = document.querySelector('.main-carousel-track');
+  const slides = document.querySelectorAll('.main-carousel-slide');
+  const indicators = document.querySelectorAll('.carousel-indicator');
+  const serviceCards = document.querySelectorAll('.service-card');
+  let currentSlide = 0;
+  let isAutoScrolling = true;
+
+  function moveToSlide(index) {
+      track.style.transition = "transform 0.5s ease-in-out";
+      track.style.transform = `translateX(-${index * 100}%)`;
+      indicators.forEach(ind => ind.classList.remove('active'));
+      indicators[index].classList.add('active');
+      currentSlide = index;
+  }
+
+  function startAutoScroll() {
+      setInterval(() => {
+          if (isAutoScrolling) {
+              const nextSlide = (currentSlide + 1) % slides.length;
+              moveToSlide(nextSlide);
+          }
+      }, 4000);
+  }
+
+  function resetInterval() {
+      isAutoScrolling = false;
+      setTimeout(() => (isAutoScrolling = true), 6000);
+  }
+
+  indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+          moveToSlide(index);
+          resetInterval();
+      });
+  });
+
+  // ** Mobile Swipe Support ** 
+  let startX;
+  track.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+  });
+
+  track.addEventListener('touchend', (e) => {
+      let endX = e.changedTouches[0].clientX;
+      if (startX - endX > 50) {
+          moveToSlide((currentSlide + 1) % slides.length);
+      } else if (endX - startX > 50) {
+          moveToSlide((currentSlide - 1 + slides.length) % slides.length);
+      }
+      resetInterval();
+  });
+
+  startAutoScroll();
+});
+
+
