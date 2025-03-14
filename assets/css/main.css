@@ -34,7 +34,7 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f3f9ff;
+  --background-color: #fff;
   --surface-color: #ffffff;
 }
 
@@ -817,12 +817,12 @@ section,
 .responsive-text {
   font-size: 17px;
   line-height: 1.6;
-  text-align: left;
+  text-align: justify;
   word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: normal; /* Ensures text wraps naturally */
-  max-width: 700px; /* Limits width to keep a readable structure */
-   /* Centers the text */
+  max-width: 500px; /* Limits width to keep a readable structure */
+   
 }
 
 /* Tablet screens (below 991px) */
@@ -839,15 +839,21 @@ section,
   .responsive-text {
     font-size: 12px;
     line-height: 1.4;
-    text-align: left;
-    max-width: 200px;
+    text-align: justify;
+    max-width: 150px;
   }
+}
+
+.respsubtext{
+  font-family: "Poppins";
+  font-weight: 450;
+  color: #1aa3ab;
 }
 
 .responsive-text-righttext {
   font-size: 17px;
   line-height: 1.6;
-  text-align: right;
+  text-align: justify;
   word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: normal;
@@ -869,8 +875,8 @@ section,
   .responsive-text-righttext {
     font-size: 12px;
     line-height: 1.4;
-    text-align: right;
-    max-width: 250px; /* Reduce max width more */
+    text-align: justify;
+    max-width: 150px; /* Reduce max width more */
   }
 }
 
@@ -1477,6 +1483,7 @@ section,
   background: var(--accent-color);
   color: var(--contrast-color);
   padding: 7rem 0;
+  height: 750px;
 }
 
 .about1 .content .img-overlap {
@@ -1503,6 +1510,148 @@ section,
   text-transform: uppercase;
   font-size: 1.3rem;
 }
+@media (max-width: 767px) {
+  .about1 .content {
+    height: 1111px;
+  }
+}
+
+
+.container-section {
+  font-family: "Poppins";
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.container-section header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.container-section .content-text {
+  font-family: "Poppins";
+  color: #fbc013;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.container-section .divider {
+  position: relative;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  color: #1aa3ab;
+  justify-content: center;
+}
+
+.container-section .dots {
+  color: #0a3b2c;
+  font-size: 24px;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 2;
+}
+
+.container-section .line {
+  position: absolute;
+  height: 3px;
+  width: 80px;
+  background-color: #1aa3ab;
+  z-index: 1;
+}
+
+.container-section .achievements {
+  font-family: "Poppins";
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.container-section .achievement-column {
+  font-family: "Poppins";
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .container-section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 500;
+} */
+.achievement-column-text {
+  font-family: "Poppins";
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 500;
+
+}
+
+.container-section .card {
+  font-family: "Poppins";
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-section .aws-logo {
+  height: 40px;
+}
+
+.container-section .logo-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  gap: 15px;
+}
+
+.container-section .logo {
+  height: 40px;
+  object-fit: contain;
+}
+
+.container-section .supercharger-logo {
+  height: 50px;
+}
+
+.container-section footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 1rem;
+  color: #0a3b2c;
+}
+
+@media (max-width: 768px) {
+  .container-section .achievements {
+    flex-direction: column;
+  }
+
+  .container-section .achievement-column {
+    width: 100%;
+  }
+
+  .container-section h1 {
+    font-size: 2rem;
+  }
+}
+
+
+
 /*--------------------------------------------------------------
 # Recent Posts Section
 --------------------------------------------------------------*/
@@ -1582,6 +1731,9 @@ section,
 /*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
+.faq{
+  background-color: #f3f9ff;
+}
 .faq .faq-title {
   font-size: 2.5rem;
   font-weight: 700;
