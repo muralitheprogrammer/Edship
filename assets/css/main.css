@@ -854,14 +854,11 @@ section,
   font-size: 17px;
   line-height: 1.6;
   text-align: justify;
-  word-spacing: 0.5px; 
-  letter-spacing: 0.2px; 
-  word-wrap: normal; /* Allow natural word wrapping */
-  overflow-wrap: normal; /* Prevent excessive breaks */
+  word-wrap: normal; 
+  overflow-wrap: normal;
   white-space: normal;
-  max-width: 600px; /* Keep text within a readable width */
+  max-width: 665px;
   margin-left: auto;
-  margin-right: 0;
 }
 
 
