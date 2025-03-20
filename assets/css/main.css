@@ -854,13 +854,16 @@ section,
   font-size: 17px;
   line-height: 1.6;
   text-align: justify;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  word-spacing: 0.5px; 
+  letter-spacing: 0.2px; 
+  word-wrap: normal; /* Allow natural word wrapping */
+  overflow-wrap: normal; /* Prevent excessive breaks */
   white-space: normal;
-  max-width: 600px; /* Add max width to prevent overflow */
-  margin-left: auto; /* Keep it aligned */
-  margin-right: 0; /* Ensure it stays on the right */
+  max-width: 600px; /* Keep text within a readable width */
+  margin-left: auto;
+  margin-right: 0;
 }
+
 
 
 @media (max-width: 991px) {
@@ -1073,7 +1076,7 @@ section,
 }
 
 .about .about-title {
-  font-size: 1.75rem;
+  font-size: 1.45rem;
   font-family: "Mulish", sans-serif;
   margin-bottom: 1rem;
   line-height: 1.2;
@@ -1088,6 +1091,7 @@ section,
 
 .about .about-description {
   margin-bottom: 2rem;
+  
   color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
 
@@ -1258,6 +1262,83 @@ section,
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
+.erp-logo {
+  width: 50px;
+  height: 50px;
+  background-image: url("/assets/img/Logo/ERPCOLOR.png");
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.3s ease-in-out;
+}
+.nav-link:hover .erp-logo,
+.nav-link.active .erp-logo {
+  background-image: url("/assets/img/Logo/ERPCOLORWHITE.png"); /* Change to your white image */
+}
+
+.AI-logo {
+  width: 50px;
+  height: 50px;
+  background-image: url("/assets/img/Logo/AI_Color.png");
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.3s ease-in-out;
+}
+.nav-link:hover .AI-logo,
+.nav-link.active .AI-logo {
+  background-image: url("/assets/img/Logo/AI_White.png"); /* Change to your white image */
+}
+
+.BUS-logo {
+  width: 50px;
+  height: 50px;
+  background-image: url("/assets/img/Logo/BUS_Color.png");
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.3s ease-in-out;
+}
+.nav-link:hover .BUS-logo,
+.nav-link.active .BUS-logo {
+  background-image: url("/assets/img/Logo/BUS_White.png"); /* Change to your white image */
+}
+
+.FACE-logo {
+  width: 50px;
+  height: 50px;
+  background-image: url("/assets/img/Logo/FACE_Color.png");
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.3s ease-in-out;
+}
+.nav-link:hover .FACE-logo,
+.nav-link.active .FACE-logo {
+  background-image: url("/assets/img/Logo/FACE_White.png"); /* Change to your white image */
+}
+.WATCH-logo {
+  width: 50px;
+  height: 50px;
+  background-image: url("/assets/img/Logo/WT_Color.png");
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.3s ease-in-out;
+}
+.nav-link:hover .WATCH-logo,
+.nav-link.active .WATCH-logo {
+  background-image: url("/assets/img/Logo/WT_White.png"); /* Change to your white image */
+}
+.VR-logo {
+  width: 50px;
+  height: 50px;
+  background-image: url("/assets/img/Logo/VR_Color.png");
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.3s ease-in-out;
+}
+.nav-link:hover .VR-logo,
+.nav-link.active .VR-logo {
+  background-image: url("/assets/img/Logo/VR_White.png"); /* Change to your white image */
+}
+
+
 .features .nav-tabs {
   border: 0;
 }
@@ -1483,7 +1564,7 @@ section,
   background: var(--accent-color);
   color: var(--contrast-color);
   padding: 7rem 0;
-  height: 750px;
+  height: 820px;
 }
 
 .about1 .content .img-overlap {
@@ -1512,7 +1593,7 @@ section,
 }
 @media (max-width: 767px) {
   .about1 .content {
-    height: 1111px;
+    height: 1400px;
   }
 }
 
