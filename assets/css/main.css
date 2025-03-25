@@ -704,6 +704,7 @@ section,
   
 }
 
+
 .slider-content {
   position: relative;
   height: 100%;
@@ -840,7 +841,7 @@ section,
     font-size: 12px;
     line-height: 1.4;
     text-align: justify;
-    max-width: 150px;
+    max-width: 250px;
   }
 }
 
