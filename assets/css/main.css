@@ -436,12 +436,38 @@ h6 {
 
 .footer .footer-about .logo {
   line-height: 1;
-  margin-bottom: 10px;
+  margin-bottom: 0; /* Reduce space below the logo */
+  display: flex;
+  align-items: center; 
 }
 
 .footer .footer-about .logo img {
   max-height: 150px;
   margin-right: 6px;
+  display: block;
+}
+.footer .footer-contact {
+  padding-top: 5px; /* Reduce space between logo and paragraph */
+  margin-top: -50px; /* Remove any unwanted margin */
+}
+.footer-talk{
+  width: 150%; /* Makes the image responsive */
+     /* Limits the size of the image */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes any extra space below the image */
+    margin: 10px auto; /* Centers the image inside the div */
+    border-radius: 5px;
+}
+@media (max-width: 768px) {
+  .footer-talk {
+      max-width: 150px; /* Reduce size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-talk {
+      max-width: 120px; /* Further reduce size for mobile devices */
+  }
 }
 
 .footer .footer-about .logo span {
@@ -453,6 +479,7 @@ h6 {
 }
 
 .footer .footer-about p {
+  margin-top: 5px;
   font-size: 14px;
   font-family: var(--heading-font);
 }
@@ -520,7 +547,7 @@ h6 {
 }
 
 .footer .footer-contact p {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   padding-top: 10px;
 }
 
@@ -650,7 +677,7 @@ section,
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 22px;
   font-weight: 700;
   margin-bottom: 20px;
   color: #fbc013;
@@ -1059,6 +1086,17 @@ section,
   font-style: normal;
   
 }
+.highlighted-class1{
+  color:#4db173;
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+}
+.sub_heading{
+  font-size: 22px;
+  font-weight: 700;
+}
 .highlighted-class2{
   color:#1aa3ab;
   font-family: "Poppins", sans-serif;
@@ -1069,6 +1107,7 @@ section,
 .about .about-meta {
   color: #fbc013;
   font-weight: 600;
+  font-size: 22px;
   margin-bottom: 1rem;
   display: inline-block;
 }
@@ -1363,8 +1402,8 @@ section,
 }
 
 .features .nav-link h4 {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
   margin: 10px 0 0 0;
 }
 
@@ -1559,8 +1598,8 @@ section,
 }
 
 .about1 .content {
-  background: var(--accent-color);
-  color: var(--contrast-color);
+  background: #f3f9ff;
+  color: #1aa3ab;
   padding: 7rem 0;
   height: 820px;
 }
@@ -1570,11 +1609,11 @@ section,
 }
 
 .about1 p {
-  color: var(--contrast-color);
+  color: #1aa3ab;
 }
 
 .about1 .content-title {
-  color: var(--contrast-color);
+  color: v#1aa3ab;
   font-weight: 300;
   text-align: left;
 }
@@ -1685,6 +1724,30 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid black;
+}
+.container-section .card1 {
+  font-family: "Poppins";
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  display: flex; /* Makes images appear in a row */
+  justify-content: center; /* Centers images */
+  gap: 20px; /* Adds space between images */
+  padding: 20px;
+  border: 1px solid black; /* Black border */
+}
+
+.card1 img {
+  width: 100px;
+  height: auto;
+  border-radius: 5px; 
+  
 }
 
 .container-section .aws-logo {
