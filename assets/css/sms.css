@@ -92,9 +92,15 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   background-color: var(--background-color);
+  padding-top: 40px;
 }
 
 .header .topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
   font-family: "Poppins", sans-serif;
   background-color: #1aa3ab;
   height: 40px;
@@ -160,11 +166,11 @@ h6 {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
 
-.scrolled .header .topbar {
+/* .scrolled .header .topbar {
   height: 0;
   visibility: hidden;
   overflow: hidden;
-}
+} */
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -436,12 +442,38 @@ h6 {
 
 .footer .footer-about .logo {
   line-height: 1;
-  margin-bottom: 10px;
+  margin-bottom: 0; /* Reduce space below the logo */
+  display: flex;
+  align-items: center; 
 }
 
 .footer .footer-about .logo img {
   max-height: 150px;
   margin-right: 6px;
+  display: block;
+}
+.footer .footer-contact {
+  padding-top: 5px; /* Reduce space between logo and paragraph */
+  margin-top: -50px; /* Remove any unwanted margin */
+}
+.footer-talk{
+  width: 150%; /* Makes the image responsive */
+     /* Limits the size of the image */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes any extra space below the image */
+    margin: 10px auto; /* Centers the image inside the div */
+    border-radius: 5px;
+}
+@media (max-width: 768px) {
+  .footer-talk {
+      max-width: 150px; /* Reduce size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-talk {
+      max-width: 120px; /* Further reduce size for mobile devices */
+  }
 }
 
 .footer .footer-about .logo span {
@@ -453,6 +485,7 @@ h6 {
 }
 
 .footer .footer-about p {
+  margin-top: 5px;
   font-size: 14px;
   font-family: var(--heading-font);
 }
@@ -520,7 +553,7 @@ h6 {
 }
 
 .footer .footer-contact p {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   padding-top: 10px;
 }
 
@@ -537,7 +570,6 @@ h6 {
   margin-top: 8px;
   font-size: 13px;
 }
-
 /*--------------------------------------------------------------
 # Scroll Top Button
 --------------------------------------------------------------*/
@@ -707,17 +739,18 @@ section,
 
 .hero h1 {
   margin: 0;
-  font-size: 48px;
+  font-size: 39px;
   font-weight: bold;
   line-height: 56px;
   color: #fbc013;
+  margin-top: -10px;
 }
 
 
 .hero p {
   color: black;
   margin: 5px 0 30px 0;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
 }
 .autogenteratetext{
@@ -771,7 +804,21 @@ section,
 .hero .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
+.hero img {
+  max-width: 20%;
+  height: auto;
+  display: block;
+  
+  margin-bottom: 2px; 
+}
 
+@media (max-width: 640px) {
+  .hero img {
+    max-width: 80%; /* Adjust the size for smaller screens */
+    margin: 0 auto 15px; /* Centers the image and adds spacing */
+    display: block;
+  }
+}
 @media (max-width: 640px) {
   .hero h1 {
     font-size: 28px;
@@ -1609,6 +1656,18 @@ section,
   border-radius: 50px;
   transition: 0.5s;
 }
+.eGuidStyle{
+  color: var(--contrast-color);
+  background-color: var(--accent-color);
+  font-family: var(--heading-font);
+  display: inline-block;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  padding: 10px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+}
 
 .features .details .btn-get-started:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
@@ -1663,7 +1722,7 @@ section,
 .services .details h3 {
   font-weight: 700;
   margin: 10px 0 15px 0;
-  font-size: 22px;
+  font-size: 15px;
   transition: ease-in-out 0.3s;
 }
 
