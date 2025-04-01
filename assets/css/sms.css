@@ -445,6 +445,7 @@ h6 {
   margin-bottom: 0; /* Reduce space below the logo */
   display: flex;
   align-items: center; 
+  margin-top: -50px;
 }
 
 .footer .footer-about .logo img {
@@ -569,6 +570,74 @@ h6 {
 .footer .credits {
   margin-top: 8px;
   font-size: 13px;
+}
+
+.footer-support {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  height: 35%;
+}
+
+.support-container {
+  display: flex;
+  align-items: center;
+  background-color: #1CA5A8; /* Background color similar to your image */
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+  width: 75%;
+  max-width: 400px;
+  height: 35%;
+  margin-top: -1%
+}
+
+.support-icon {
+  width: 80px; /* Adjust size as needed */
+  height: auto;
+  margin-right: 15px;
+}
+
+.support-text h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.support-text p {
+  font-size: 18px;
+  margin: 5px 0 0;
+}
+
+@media (max-width: 768px) {
+  .support-container {
+    display: flex;
+    align-items: center;
+    background-color: #1CA5A8; 
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    width: 85%;
+    max-width: 400px;
+    height: 35%;
+    margin-top: -1%
+  }
+}
+
+@media (max-width: 480px) {
+  .support-container {
+    display: flex;
+    align-items: center;
+    background-color: #1CA5A8; 
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    width: 85%;
+    max-width: 400px;
+    height: 35%;
+    margin-top: -1%
+  }
 }
 /*--------------------------------------------------------------
 # Scroll Top Button
