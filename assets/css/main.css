@@ -588,26 +588,27 @@ h6 {
   padding: 5px;
   border-radius: 10px;
   color: white;
-  width: 75%;
+  width: 55%;
   max-width: 400px;
   height: 35%;
   margin-top: -1%
 }
 
 .support-icon {
-  width: 80px; /* Adjust size as needed */
+  width: 60px; 
   height: auto;
   margin-right: 15px;
 }
 
 .support-text h4 {
-  font-size: 20px;
+  font-size: 13px;
   font-weight: bold;
   margin: 0;
 }
 
 .support-text p {
-  font-size: 18px;
+  font-size: 13px;
+  font-weight: bold;
   margin: 5px 0 0;
 }
 
@@ -853,7 +854,7 @@ section,
 }
 
 .slide-sub-title {
-  font-size: 39px;
+  font-size: 35px;
   line-height: 58px;
   margin: 20px 0;
   color: black;
@@ -961,7 +962,7 @@ section,
   word-wrap: normal; 
   overflow-wrap: normal;
   white-space: normal;
-  max-width: 665px;
+  max-width: 655px;
   margin-left: auto;
 }
 
@@ -1151,6 +1152,33 @@ section,
   margin: -20px;
 }
 
+@media (max-width: 575px) {
+  .banner-carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    filter: blur(8px);
+  }
+
+  .banner-carousel-item {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .banner-carousel-item .slider-content {
+    position: relative;
+    z-index: 2;
+  }
+}
+.banner-carousel-item::before {
+  background-image: var(--mobile-blur-bg);
+}
 
 /*--------------------------------------------------------------
 # About Section
@@ -1169,9 +1197,21 @@ section,
   font-style: normal;
   font-size: 22px;
 }
+.highlighted-class3{
+  color:#4db173;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 22px;
+}
 .sub_heading{
   font-size: 22px;
   font-weight: 700;
+}
+.sub_heading1{
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 103px;
 }
 .highlighted-class2{
   color:#1aa3ab;
@@ -1204,7 +1244,6 @@ section,
 
 .about .about-description {
   margin-bottom: 2rem;
-  
   color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
 
@@ -1724,6 +1763,13 @@ section,
   margin-bottom: 40px;
 }
 
+.blogstyle{
+  font-family: "Poppins";
+  color: #fbc013;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
 .container-section .content-text {
   font-family: "Poppins";
   color: #fbc013;
@@ -1802,6 +1848,21 @@ section,
   align-items: center;
   justify-content: center;
   border: 1px solid black;
+  
+}
+.container-section .card2 {
+  font-family: "Poppins";
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  margin-top: 20px
 }
 .container-section .card1 {
   font-family: "Poppins";
@@ -1817,7 +1878,31 @@ section,
   justify-content: center; /* Centers images */
   gap: 20px; /* Adds space between images */
   padding: 20px;
-  border: 1px solid black; /* Black border */
+  border: 1px solid black;
+   /* Black border */
+}
+
+.custom-heading {
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+  margin: 20px 0;
+  margin-left: 20px;
+  padding-left: 18px;
+}
+.custom-heading1 {
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+  margin: 20px 0;
+  margin-left: 20px;
+  padding-left: 175px;
+}
+
+.middle-heading {
+  order: 2.5; /* This forces it between the second and third items */
 }
 
 .card1 img {
@@ -1867,7 +1952,20 @@ section,
   .container-section h1 {
     font-size: 2rem;
   }
+  .custom-heading1{
+    padding-left: 75px;
+  }
+  .container-section .line
+  {
+    padding-left: 75px;
+  }
+  .container-section .card1
+  {
+    padding-top: 10px;
+  }
 }
+
+
 
 
 
