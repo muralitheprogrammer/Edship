@@ -1028,7 +1028,7 @@ section,
   .responsive-text-righttext {
     font-size: 14px;
     line-height: 1.5;
-    max-width: 450px;
+    max-width: 300px;
     /* Reduce max width for smaller screens */
   }
 }
@@ -1038,7 +1038,7 @@ section,
     font-size: 12px;
     line-height: 1.4;
     text-align: justify;
-    max-width: 150px;
+    max-width: 300px;
     /* Reduce max width more */
   }
 }
@@ -1484,7 +1484,7 @@ section,
 .erp-logo {
   width: 50px;
   height: 50px;
-  background-image: url("/Edship/assets/img/Logo/ERPCOLOR.png");
+  background-image: url("../img/Logo/ERPCOLOR.png");
   background-size: cover;
   background-position: center;
   transition: background-image 0.3s ease-in-out;
@@ -1492,14 +1492,14 @@ section,
 
 .nav-link:hover .erp-logo,
 .nav-link.active .erp-logo {
-  background-image: url("/Edship/assets/img/Logo/ERPCOLORWHITE.png");
+  background-image: url("../img/Logo/ERPCOLORWHITE.png");
   /* Change to your white image */
 }
 
 .AI-logo {
   width: 50px;
   height: 50px;
-  background-image:url("/Edship/assets/img/Logo/ERPCOLORWHITE.png");
+  background-image:url("../img/Logo/AI_Color.png");
   background-size: cover;
   background-position: center;
   transition: background-image 0.3s ease-in-out;
@@ -1507,14 +1507,14 @@ section,
 
 .nav-link:hover .AI-logo,
 .nav-link.active .AI-logo {
-  background-image: url("/Edship/assets/img/Logo/ERPCOLORWHITE.png");
+  background-image: url("../img/Logo/AI_White.png");
   /* Change to your white image */
 }
 
 .BUS-logo {
   width: 50px;
   height: 50px;
-  background-image: url("/Edship/assets/img/Logo/BUS_Color.png");
+  background-image: url("../img/Logo/BUS_Color.png");
   background-size: cover;
   background-position: center;
   transition: background-image 0.3s ease-in-out;
@@ -1522,14 +1522,14 @@ section,
 
 .nav-link:hover .BUS-logo,
 .nav-link.active .BUS-logo {
-  background-image: url("/Edship/assets/img/Logo/BUS_White.png")
+  background-image: url("../img/Logo/BUS_White.png")
   /* Change to your white image */
 }
 
 .FACE-logo {
   width: 50px;
   height: 50px;
-  background-image: url("/Edship/assets/img/Logo/FACE_Color.png");
+  background-image: url("../img/Logo/FACE_Color.png");
   background-size: cover;
   background-position: center;
   transition: background-image 0.3s ease-in-out;
@@ -1537,14 +1537,14 @@ section,
 
 .nav-link:hover .FACE-logo,
 .nav-link.active .FACE-logo {
-  background-image: url("/Edship/assets/img/Logo/FACE_White.png");
+  background-image: url("../img/Logo/FACE_White.png");
   /* Change to your white image */
 }
 
 .WATCH-logo {
   width: 50px;
   height: 50px;
-  background-image: url("/Edship/assets/img/Logo/WT_Color.png");
+  background-image: url("../img/Logo/WT_Color.png");
   background-size: cover;
   background-position: center;
   transition: background-image 0.3s ease-in-out;
@@ -1552,14 +1552,14 @@ section,
 
 .nav-link:hover .WATCH-logo,
 .nav-link.active .WATCH-logo {
-  background-image: url("/Edship/assets/img/Logo/WT_White.png");
+  background-image: url("../img/Logo/WT_White.png");
   /* Change to your white image */
 }
 
 .VR-logo {
   width: 50px;
   height: 50px;
-  background-image: url("/Edship/assets/img/Logo/VR_Color.png");
+  background-image: url("../img/Logo/VR_Color.png");
   background-size: cover;
   background-position: center;
   transition: background-image 0.3s ease-in-out;
@@ -1567,7 +1567,7 @@ section,
 
 .nav-link:hover .VR-logo,
 .nav-link.active .VR-logo {
-  background-image: url("/Edship/assets/img/Logo/VR_White.png")
+  background-image: url("../img/Logo/VR_White.png")
   /* Change to your white image */
 }
 
@@ -2409,7 +2409,7 @@ section,
   /* Add your styles here */
 }
 
-<<<<<<< HEAD
+
 
 
 
@@ -2468,51 +2468,7 @@ section,
   cursor: pointer;
 }
 
-=======
-:root{
-  --marquee-bg-color: #f1f1f1;
-  --marquee-bg-color-rgba: 241, 241, 241;
-}
-*{
-  box-sizing: border-box;
-}
-.marquee {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            white-space: nowrap;
-            background-color: var(--marquee-bg-color);
-            padding:1px;
-        }
-        .marquee span {
-            display: inline-block;
-            font-size: 16px;
-            font-weight: bold;
-            color: #1aa3ab;
-            will-change: transform;
-            align-self: center;
-        }
 
-.marquee::before, .marquee::after{
-  content: "";
-  position: absolute;
-  top:0;
-  bottom:0;
-  width:10px;
-  z-index:2;
-}
-
-.marquee::before{
-  left:0;
-  background: linear-gradient(to right, rgba(var(--marquee-bg-color-rgba), 1), rgba(var(--marquee-bg-color-rgba), 0));
-}
-.marquee::after{
-  right:0;
-    background: linear-gradient(to left, rgba(var(--marquee-bg-color-rgba), 1), rgba(var(--marquee-bg-color-rgba), 0));
-}
-
-
->>>>>>> bb52ead (Home Page)
 .eco-wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -2769,7 +2725,6 @@ section,
   .eco-box-offset {
     min-height: 100px;
   }
-<<<<<<< HEAD
 }
 
 /* Popup container */
@@ -2950,6 +2905,5 @@ form button:hover {
     background: linear-gradient(to left, rgba(var(--marquee-bg-color-rgba), 1), rgba(var(--marquee-bg-color-rgba), 0));
 }
 
-=======
-}
->>>>>>> bb52ead (Home Page)
+
+
